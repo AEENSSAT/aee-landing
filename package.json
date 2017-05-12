@@ -1,9 +1,9 @@
 {
-  "name": "AEE LANDING",
+  "name": "aeelanding",
   "version": "1.0.0",
   "description": "Landing page for ENSSAT AEE",
   "main": "gulpfile.js",
-  "dependencies": {
+  "devDependencies": {
     "gulp-autoprefixer": "^3.1.0",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.1",
@@ -13,7 +13,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-minify": "^0.0.5"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
