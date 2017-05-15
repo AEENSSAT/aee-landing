@@ -1829,6 +1829,7 @@ body {
   overflow-x: hidden;
 }
 header {
+  font-family: 'sansationregular', sans-serif;
   height: 100px;
   position: relative;
   display: -ms-flexbox;
@@ -1874,6 +1875,7 @@ header:after {
   box-shadow: 0 0 25px 0px black;
 }
 #firstSection {
+  font-family: 'sansationregular', sans-serif;
   height: 800px;
   position: relative;
   text-align: center;
@@ -1887,6 +1889,7 @@ header:after {
 #firstSection h1 {
   font-size: 45px;
   color: white;
+  font-family: 'sansationregular', sans-serif;
 }
 #firstSection .buttons {
   display: -ms-flexbox;
