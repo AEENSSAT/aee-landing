@@ -7,15 +7,23 @@
 /***************/
 
 .centerDiv {
-    width: 1200px;
+    width: 1300px;
     margin: auto;
 }
 
 body{
     overflow-x:hidden;
 }
+
+h2 {
+    text-align: center;
+    font-family: 'sansationregular', sans-serif;
+    color: @orange;
+    font-size: 45px;
+}
+
 header {
-  font-family: 'sansationregular', sans-serif;
+    font-family: 'sansationregular', sans-serif;
     height: 100px;
     position: relative;
     display: flex;
@@ -121,8 +129,8 @@ header {
 
 #presentation{
     background: white;
-    height: 500px;
     position: relative;
+    padding-bottom: 50px;
 
     &:after{
         content: '';
@@ -136,5 +144,136 @@ header {
         transform: rotate(-3deg);
         z-index: -1;
         box-shadow: 0 0 25px 0px black;
+    }
+
+    .centerDiv {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+
+        .column {
+            .round {
+                display: inline-block;
+                width: 200px;
+                height: 200px;
+                background: @orange;
+                border-radius: 200%;
+            }
+
+            p {
+                padding: 0 45px;
+                text-align: justify;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+#thirdSection {
+    height: 800px;
+    padding-top: 150px;
+    position: relative;
+
+    &:after{
+        content: '';
+        width: 120%;
+        position: absolute;
+        left: -30px;
+        height: 150px;
+        bottom: -75px;
+        background: white;
+        border-top: 5px solid orange;
+        transform: rotate(-3deg);
+        box-shadow: 0 0 25px 0px black;
+        z-index: -1;
+    }
+}
+
+#clubs {
+    background: white;
+    //height: 500px;
+    position: relative;
+    padding-bottom: 55px;
+    &:after{
+        content: '';
+        width: 120%;
+        position: absolute;
+        left: -30px;
+        height: 300px;
+        bottom: -45px;
+        background: white;
+        border-bottom: 5px solid @orange;
+        transform: rotate(-3deg);
+        z-index: -1;
+        box-shadow: 0 0 25px 0px black;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .clubs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .club {
+            width: 25%;
+            height: 120px;
+            border: 1px solid white;
+            text-align: center;
+            color: white;
+            font-family: 'sansationregular', sans-serif;
+            font-size: 30px;
+            position:relative;
+
+            .faceA{
+                width:100%;
+                height:120px;
+                line-height: 120px;
+                position:absolute;
+                top:0;
+                background: @orange;
+                background-size: contain;
+                text-shadow: 0 0 10px black;
+                font-weight: bold;
+                transform:perspective(2000px) rotateX(0deg);
+                backface-visibility: hidden;
+                transition:all .5s ease;
+                //z-index:5;
+
+            }
+            &:hover .faceA{
+                transform:perspective(2000px) rotateX(180deg);
+                //z-index:-5;
+            }
+
+            .faceB{
+                //z-index:-3;
+                position:absolute;
+                top:0;
+                width:100%;
+                height:120px;
+                background: @orange;
+
+                transform:perspective(2000px) rotateX(-180deg);
+                backface-visibility: hidden;
+                transition:all .5s ease;
+
+                font-size: 18px;
+                line-height: 120px;
+                text-align:center;
+                overflow: hidden;
+                padding:4px;
+            }
+
+            &:hover .faceB{
+                transform:perspective(2000px) rotateX(0deg);
+                //z-index:7;
+            }
+        }
     }
 }

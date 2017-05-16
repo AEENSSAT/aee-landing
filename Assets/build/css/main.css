@@ -1822,11 +1822,17 @@ th {
 /***** VARS ****/
 /***************/
 .centerDiv {
-  width: 1200px;
+  width: 1300px;
   margin: auto;
 }
 body {
   overflow-x: hidden;
+}
+h2 {
+  text-align: center;
+  font-family: 'sansationregular', sans-serif;
+  color: orange;
+  font-size: 45px;
 }
 header {
   font-family: 'sansationregular', sans-serif;
@@ -1932,8 +1938,8 @@ header:after {
 }
 #presentation {
   background: white;
-  height: 500px;
   position: relative;
+  padding-bottom: 50px;
 }
 #presentation:after {
   content: '';
@@ -1948,4 +1954,125 @@ header:after {
       transform: rotate(-3deg);
   z-index: -1;
   box-shadow: 0 0 25px 0px black;
+}
+#presentation .centerDiv {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  text-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+#presentation .centerDiv .column .round {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background: orange;
+  border-radius: 200%;
+}
+#presentation .centerDiv .column p {
+  padding: 0 45px;
+  text-align: justify;
+  font-size: 16px;
+}
+#thirdSection {
+  height: 800px;
+  padding-top: 150px;
+  position: relative;
+}
+#thirdSection:after {
+  content: '';
+  width: 120%;
+  position: absolute;
+  left: -30px;
+  height: 150px;
+  bottom: -75px;
+  background: white;
+  border-top: 5px solid orange;
+  -ms-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+  box-shadow: 0 0 25px 0px black;
+  z-index: -1;
+}
+#clubs {
+  background: white;
+  position: relative;
+  padding-bottom: 55px;
+}
+#clubs:after {
+  content: '';
+  width: 120%;
+  position: absolute;
+  left: -30px;
+  height: 300px;
+  bottom: -45px;
+  background: white;
+  border-bottom: 5px solid orange;
+  -ms-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+  z-index: -1;
+  box-shadow: 0 0 25px 0px black;
+}
+#clubs p {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+#clubs .clubs {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#clubs .clubs .club {
+  width: 25%;
+  height: 120px;
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+  font-family: 'sansationregular', sans-serif;
+  font-size: 30px;
+  position: relative;
+}
+#clubs .clubs .club .faceA {
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+  position: absolute;
+  top: 0;
+  background: orange;
+  background-size: contain;
+  text-shadow: 0 0 10px black;
+  font-weight: bold;
+  transform: perspective(2000px) rotateX(0deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all .5s ease;
+}
+#clubs .clubs .club:hover .faceA {
+  transform: perspective(2000px) rotateX(180deg);
+}
+#clubs .clubs .club .faceB {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background: orange;
+  transform: perspective(2000px) rotateX(-180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all .5s ease;
+  font-size: 18px;
+  line-height: 120px;
+  text-align: center;
+  overflow: hidden;
+  padding: 4px;
+}
+#clubs .clubs .club:hover .faceB {
+  transform: perspective(2000px) rotateX(0deg);
 }
