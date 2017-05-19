@@ -1825,6 +1825,11 @@ th {
   width: 1300px;
   margin: auto;
 }
+@media screen and (max-width: 1000px) {
+  .centerDiv {
+    width: 100%;
+  }
+}
 body {
   overflow-x: hidden;
 }
@@ -1833,6 +1838,12 @@ h2 {
   font-family: 'sansationregular', sans-serif;
   color: orange;
   font-size: 45px;
+}
+@media screen and (max-width: 1000px) {
+  h2 {
+    font-size: 30px;
+    padding-top: 20px;
+  }
 }
 header {
   font-family: 'sansationregular', sans-serif;
@@ -1859,9 +1870,22 @@ header nav ul {
   padding: 0;
   margin: 0;
 }
+@media screen and (max-width: 1000px) {
+  header nav ul {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+}
 header nav ul li {
   margin: 0 25px;
   font-size: 25px;
+}
+@media screen and (max-width: 1000px) {
+  header nav ul li {
+    margin: 10px 0;
+  }
 }
 header nav ul li a {
   text-decoration: none;
@@ -1879,6 +1903,21 @@ header:after {
       transform: rotate(-3deg);
   z-index: -1;
   box-shadow: 0 0 25px 0px black;
+}
+@media screen and (max-width: 1000px) {
+  header {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    height: auto;
+  }
+  header:after {
+    -ms-transform: rotate(0);
+        transform: rotate(0);
+    bottom: 0;
+    height: auto;
+  }
 }
 #firstSection {
   font-family: 'sansationregular', sans-serif;
@@ -1904,6 +1943,14 @@ header:after {
       flex-direction: row;
   -ms-flex-pack: center;
       justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  #firstSection .buttons {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
 }
 #firstSection .buttons .button-like {
   display: block;
@@ -1961,10 +2008,25 @@ header:after {
   -ms-flex-direction: row;
       flex-direction: row;
   text-align: center;
-  -ms-flex-align: center;
-      align-items: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#presentation .centerDiv .column {
+  width: 25%;
+}
+@media screen and (max-width: 1000px) {
+  #presentation .centerDiv .column {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #presentation .centerDiv .column {
+    width: 100%;
+  }
 }
 #presentation .centerDiv .column .round {
   display: inline-block;
@@ -1972,16 +2034,40 @@ header:after {
   height: 200px;
   background: orange;
   border-radius: 200%;
+  border: 3px solid orange;
+}
+#presentation .centerDiv .column:nth-child(1) .round {
+  background: url('../imgs/enssat.jpg');
+  background-size: cover;
+}
+#presentation .centerDiv .column:nth-child(2) .round {
+  background: url('../imgs/equipe.png');
+  background-size: cover;
+  background-position: center 10px;
+}
+#presentation .centerDiv .column:nth-child(3) .round {
+  background: url('../imgs/etu.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#presentation .centerDiv .column:nth-child(4) .round {
+  background: url('../imgs/f4g.jpg');
+  background-size: cover;
 }
 #presentation .centerDiv .column p {
   padding: 0 45px;
-  text-align: justify;
+  text-align: center;
   font-size: 16px;
 }
 #thirdSection {
   height: 1100px;
   padding-top: 150px;
   position: relative;
+}
+@media screen and (max-width: 1000px) {
+  #thirdSection {
+    height: auto;
+  }
 }
 #thirdSection:after {
   content: '';
@@ -2003,8 +2089,22 @@ header:after {
   -ms-flex-direction: row;
       flex-direction: row;
 }
+@media screen and (max-width: 1000px) {
+  #thirdSection .contacts {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+}
 #thirdSection .contacts div {
   width: 50%;
+}
+@media screen and (max-width: 1000px) {
+  #thirdSection .contacts div {
+    width: 90%;
+    margin-top: 5px;
+  }
 }
 #thirdSection .contacts div:nth-child(2) div {
   height: 800px;
@@ -2050,6 +2150,11 @@ header:after {
   font-family: 'sansationregular', sans-serif;
   font-size: 30px;
   position: relative;
+}
+@media screen and (max-width: 1000px) {
+  #clubs .clubs .club {
+    width: 100%;
+  }
 }
 #clubs .clubs .club .faceA {
   width: 100%;

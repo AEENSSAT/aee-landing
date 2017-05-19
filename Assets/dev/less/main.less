@@ -9,6 +9,10 @@
 .centerDiv {
     width: 1300px;
     margin: auto;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
 }
 
 body{
@@ -20,6 +24,11 @@ h2 {
     font-family: 'sansationregular', sans-serif;
     color: @orange;
     font-size: 45px;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 30px;
+        padding-top: 20px;
+    }
 }
 
 header {
@@ -43,9 +52,20 @@ header {
             padding: 0;
             margin: 0;
 
+            @media screen and (max-width: 1000px) {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 20px;
+            }
+
             li{
                 margin: 0 25px;
                 font-size: 25px;
+
+                @media screen and (max-width: 1000px) {
+                    margin: 10px 0;
+                }
+
                 a {
                     text-decoration: none;
                 }
@@ -65,6 +85,18 @@ header {
         transform: rotate(-3deg);
         z-index: -1;
         box-shadow: 0 0 25px 0px black;
+    }
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+
+        &:after {
+            transform: rotate(0);
+            bottom: 0;
+            height: auto;
+        }
     }
 }
 
@@ -92,6 +124,12 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: center;
+
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         .button-like {
             display: block;
             width: 300px;
@@ -150,21 +188,60 @@ header {
         display: flex;
         flex-direction: row;
         text-align: center;
-        align-items: center;
+        align-items:flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .column {
+            width: 25%;
+
+            @media screen and (max-width: 1000px) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: 500px) {
+                width: 100%;
+            }
+
             .round {
                 display: inline-block;
                 width: 200px;
                 height: 200px;
                 background: @orange;
                 border-radius: 200%;
+                border: 3px solid @orange;
+
+            }
+
+            &:nth-child(1) .round{
+                background: url('../imgs/enssat.jpg');
+                background-size: cover;
+
+            }
+
+            &:nth-child(2) .round{
+                background: url('../imgs/equipe.png');
+                background-size: cover;
+                background-position: center 10px;
+
+            }
+
+            &:nth-child(3) .round{
+                background: url('../imgs/etu.jpg');
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            &:nth-child(4) .round{
+                background: url('../imgs/f4g.jpg');
+                background-size: cover;
+
             }
 
             p {
                 padding: 0 45px;
-                text-align: justify;
+                text-align: center;
                 font-size: 16px;
             }
         }
@@ -175,6 +252,10 @@ header {
     height: 1100px;
     padding-top: 150px;
     position: relative;
+
+    @media screen and (max-width: 1000px) {
+        height: auto;
+    }
 
     &:after{
         content: '';
@@ -194,8 +275,18 @@ header {
       display: flex;
       flex-direction: row;
 
+      @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       div {
         width: 50%;
+
+        @media screen and (max-width: 1000px) {
+            width: 90%;
+            margin-top: 5px;
+        }
 
         &:nth-child(2){
           div{
@@ -244,6 +335,10 @@ header {
             font-family: 'sansationregular', sans-serif;
             font-size: 30px;
             position:relative;
+
+            @media screen and (max-width: 1000px) {
+                width: 100%;
+            }
 
             .faceA{
                 width:100%;
