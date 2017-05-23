@@ -1845,6 +1845,55 @@ h2 {
     padding-top: 20px;
   }
 }
+.buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  .buttons {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+}
+.buttons .button-like {
+  display: block;
+  width: 300px;
+  height: 75px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 10px;
+  text-decoration: none;
+  line-height: 75px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.buttons .button-like-orange {
+  background: orange;
+  border-color: orange;
+}
+.buttons .button-like-fb,
+.buttons .button-like-twitter,
+.buttons .button-like-insta {
+  border: 0;
+  font-weight: bold;
+}
+.buttons .button-like-fb {
+  background: #3b5998;
+}
+.buttons .button-like-twitter {
+  background: #1da1f2;
+}
+.buttons .button-like-insta {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
 header {
   font-family: 'sansationregular', sans-serif;
   height: 100px;
@@ -1936,39 +1985,6 @@ header:after {
   color: white;
   font-family: 'sansationregular', sans-serif;
 }
-#firstSection .buttons {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-@media screen and (max-width: 1000px) {
-  #firstSection .buttons {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-align: center;
-        align-items: center;
-  }
-}
-#firstSection .buttons .button-like {
-  display: block;
-  width: 300px;
-  height: 75px;
-  background: transparent;
-  border: 2px solid white;
-  border-radius: 5px;
-  margin: 10px;
-  text-decoration: none;
-  line-height: 75px;
-  color: white;
-  font-size: 20px;
-}
-#firstSection .buttons .button-like:nth-child(1) {
-  background: orange;
-  border-color: orange;
-}
 #firstSection:after {
   content: '';
   width: 120%;
@@ -1982,6 +1998,14 @@ header:after {
       transform: rotate(-3deg);
   box-shadow: 0 0 25px 0px black;
   z-index: -1;
+}
+@media screen and (max-width: 1000px) {
+  #firstSection:after {
+    width: 100%;
+    -ms-transform: rotate(0);
+        transform: rotate(0);
+    left: 0;
+  }
 }
 #presentation {
   background: white;
@@ -2001,6 +2025,14 @@ header:after {
       transform: rotate(-3deg);
   z-index: -1;
   box-shadow: 0 0 25px 0px black;
+}
+@media screen and (max-width: 1000px) {
+  #presentation:after {
+    width: 100%;
+    -ms-transform: rotate(0);
+        transform: rotate(0);
+    left: 0;
+  }
 }
 #presentation .centerDiv {
   display: -ms-flexbox;
@@ -2060,13 +2092,13 @@ header:after {
   font-size: 16px;
 }
 #thirdSection {
-  height: 1100px;
+  height: 1200px;
   padding-top: 150px;
   position: relative;
 }
 @media screen and (max-width: 1000px) {
   #thirdSection {
-    height: auto;
+    height: 630px;
   }
 }
 #thirdSection:after {
@@ -2083,6 +2115,11 @@ header:after {
   box-shadow: 0 0 25px 0px black;
   z-index: -1;
 }
+@media screen and (max-width: 1000px) {
+  #thirdSection:after {
+    height: 0;
+  }
+}
 #thirdSection .contacts {
   display: -ms-flexbox;
   display: flex;
@@ -2091,11 +2128,11 @@ header:after {
 }
 @media screen and (max-width: 1000px) {
   #thirdSection .contacts {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-align: center;
-        align-items: center;
+    display: none;
   }
+}
+#thirdSection .contacts-mobile {
+  margin-bottom: 20px;
 }
 #thirdSection .contacts div {
   width: 50%;
@@ -2115,7 +2152,6 @@ header:after {
   padding-bottom: 55px;
 }
 #clubs:after {
-  content: '';
   width: 120%;
   position: absolute;
   left: -30px;
@@ -2192,11 +2228,4 @@ header:after {
 }
 #clubs .clubs .club:hover .faceB {
   transform: perspective(2000px) rotateX(0deg);
-}
-footer {
-  position: relative;
-  z-index: -1;
-  padding: 100px 0;
-  background: orange;
-  color: white;
 }

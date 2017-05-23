@@ -31,6 +31,54 @@ h2 {
     }
 }
 
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-like {
+        display: block;
+        width: 300px;
+        height: 75px;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 5px;
+        margin: 10px;
+        text-decoration: none;
+        line-height: 75px;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+        &-orange{
+            background: @orange;
+            border-color: @orange;
+        }
+
+        &-fb, &-twitter, &-insta {
+            border: 0;
+            font-weight: bold;
+        }
+
+        &-fb {
+            background: #3b5998;
+        }
+
+        &-twitter {
+            background: #1da1f2;
+        }
+
+        &-insta {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        }
+    }
+}
+
 header {
     font-family: 'sansationregular', sans-serif;
     height: 100px;
@@ -120,36 +168,6 @@ header {
         font-family: 'sansationregular', sans-serif;
     }
 
-    .buttons{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        @media screen and (max-width: 1000px) {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .button-like {
-            display: block;
-            width: 300px;
-            height: 75px;
-            background: transparent;
-            border: 2px solid white;
-            border-radius: 5px;
-            margin: 10px;
-            text-decoration: none;
-            line-height: 75px;
-            color: white;
-            font-size: 20px;
-
-            &:nth-child(1){
-                background: @orange;
-                border-color: @orange;
-            }
-        }
-    }
-
     &:after{
         content: '';
         width: 120%;
@@ -162,6 +180,12 @@ header {
         transform: rotate(-3deg);
         box-shadow: 0 0 25px 0px black;
         z-index: -1;
+
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            transform: rotate(0);
+            left: 0;
+        }
     }
 }
 
@@ -182,6 +206,12 @@ header {
         transform: rotate(-3deg);
         z-index: -1;
         box-shadow: 0 0 25px 0px black;
+
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            transform: rotate(0);
+            left: 0;
+        }
     }
 
     .centerDiv {
@@ -249,12 +279,12 @@ header {
 }
 
 #thirdSection {
-    height: 1100px;
+    height: 1200px;
     padding-top: 150px;
     position: relative;
 
     @media screen and (max-width: 1000px) {
-        height: auto;
+        height: 630px;
     }
 
     &:after{
@@ -269,31 +299,38 @@ header {
         transform: rotate(-3deg);
         box-shadow: 0 0 25px 0px black;
         z-index: -1;
+
+        @media screen and (max-width: 1000px) {
+            height: 0;
+        }
     }
 
     .contacts {
-      display: flex;
-      flex-direction: row;
-
-      @media screen and (max-width: 1000px) {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      div {
-        width: 50%;
+        display: flex;
+        flex-direction: row;
 
         @media screen and (max-width: 1000px) {
-            width: 90%;
-            margin-top: 5px;
+            display: none;
         }
 
-        &:nth-child(2){
-          div{
-            height: 800px;
-          }
+        &-mobile {
+            margin-bottom: 20px;
         }
-      }
+
+        div {
+            width: 50%;
+
+            @media screen and (max-width: 1000px) {
+                width: 90%;
+                margin-top: 5px;
+            }
+
+            &:nth-child(2){
+                div{
+                    height: 800px;
+                }
+            }
+        }
     }
 }
 
@@ -302,8 +339,8 @@ header {
     //height: 500px;
     position: relative;
     padding-bottom: 55px;
+
     &:after{
-        content: '';
         width: 120%;
         position: absolute;
         left: -30px;
@@ -386,13 +423,4 @@ header {
             }
         }
     }
-}
-
-
-footer {
-  position: relative;
-  z-index: -1;
-  padding: 100px 0;
-  background: @orange;
-  color: white
 }
