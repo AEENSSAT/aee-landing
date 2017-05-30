@@ -2220,7 +2220,7 @@ header:after {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transition: all .5s ease;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 120px;
   text-align: center;
   overflow: hidden;
