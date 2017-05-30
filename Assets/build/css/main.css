@@ -2224,7 +2224,7 @@ header:after {
   line-height: 120px;
   text-align: center;
   overflow: hidden;
-  padding: 4px;
+  padding: 2px;
 }
 #clubs .clubs .club:hover .faceB {
   transform: perspective(2000px) rotateX(0deg);
