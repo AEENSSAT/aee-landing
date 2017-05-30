@@ -2073,7 +2073,7 @@ header:after {
   background-size: cover;
 }
 #presentation .centerDiv .column:nth-child(2) .round {
-  background: url('../imgs/equipe.png');
+  background: url('../imgs/equipe.jpg');
   background-size: cover;
   background-position: center 10px;
 }
